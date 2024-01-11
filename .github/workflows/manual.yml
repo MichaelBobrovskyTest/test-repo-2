@@ -1,5 +1,4 @@
 name: Manual workflow
-
 on:
   workflow_dispatch:
     inputs:
@@ -11,8 +10,8 @@ on:
 
 jobs:
   greet:
-    runs-on: ubuntu-latest
-
-    steps:
-    - name: Send greeting
-      run: echo "Hello ${{ inputs.name }}"
+    uses: michaelbobrovsky/test-global-workflow/.github/workflows/manual.yml@main
+    with: 
+      name: ${{github.event.inputs.name}}
+    secrets: inherit
+      
