@@ -10,7 +10,7 @@ on:
 
 jobs:
   greet:
-    uses: michaelbobrovsky/test-global-workflow/.github/workflows/manual.yml@main
+    uses: MichaelBobrovskyTest/test-global-workflow/.github/workflows/manual.yml@main
     with: 
       name: ${{github.event.inputs.name}}
     secrets: inherit
